@@ -100,7 +100,7 @@ app.patch('/movies/:id', (req, res) => {
   res.json(updatedMovie)
 })
 
-app.options('/movies:id', (req, res) => {
+app.options('/movies:id', (req, res) => {  
   const origin = req.header('origin')
   if (ACCEPTED_ORIGINS.includes(origin) || !origin) {
     res.header('Access-Control-Allow-Origin', origin)
